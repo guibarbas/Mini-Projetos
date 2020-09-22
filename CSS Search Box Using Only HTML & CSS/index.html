@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome CSS Search Box Using Only HTML & CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-box">
+        <input id="search-txt" type="text" placeholder="Type to search" value="">
+        <a id="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript">
+        let searchBtn = document.getElementById('search-btn');
+        let searchTxt = document.getElementById('search-txt');
+        searchTxt.addEventListener("mouseout", checkValueIsEmpty);
+        searchTxt.addEventListener("keyup", checkValueIsEmpty);
+
+        function checkValueIsEmpty() {
+            if (searchTxt.value != "" && searchTxt.classList.contains('active') == false) {
+                searchTxt.classList.add('active')
+                searchBtn.classList.add('active')
+            } else if (searchTxt.value == "" && searchTxt.classList.contains('active') == true) {
+                searchTxt.classList.remove('active')
+                searchBtn.classList.remove('active')
+            }
+        }
+    </script>
+</body>
+</html>

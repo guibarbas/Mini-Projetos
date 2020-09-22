@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sticky Navigation Bar On Scroll Using Vanilla Javascript</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner"></section>
+    <section class="content">
+        <h2>Sticky Navigation Bar On Scroll Using Vanilla Javascript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin fermentum, nulla ac ultrices tempor, quam nibh interdum orci, sit amet malesuada magna mi nec sem. Maecenas tempus eros in leo feugiat hendrerit. Proin at interdum elit. Vestibulum volutpat velit sem, imperdiet consequat erat sollicitudin in. Pellentesque porta placerat orci auctor pretium. Duis nulla tellus, vehicula nec nulla at, varius luctus lacus. Etiam sit amet posuere leo, et ornare velit.</p>
+        
+    <p>Phasellus eget fringilla dui. Nam posuere tincidunt nulla, eget aliquam sapien vehicula sit amet. Nulla volutpat magna ante, non convallis erat dignissim vel. Donec vehicula risus et arcu rhoncus hendrerit. Morbi a nunc pharetra, gravida ante sit amet, dignissim nibh. In nec ipsum scelerisque, posuere libero eu, laoreet nisi. Vestibulum tincidunt metus eget nulla finibus feugiat nec at ante.</p>
+    </section>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            let header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Touch Slider Using Html CSS & Swiper.js</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img1.jpg"></div>
+            <div class="swiper-slide"><img src="img2.jpg"></div>
+            <div class="swiper-slide"><img src="img3.jpg"></div>
+            <div class="swiper-slide"><img src="img4.jpg"></div>
+            <div class="swiper-slide"><img src="img5.jpg"></div>
+            <div class="swiper-slide"><img src="img6.jpg"></div>
+            <div class="swiper-slide"><img src="img7.jpg"></div>
+            <div class="swiper-slide"><img src="img8.jpg"></div>
+            <div class="swiper-slide"><img src="img9.jpg"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            loop: true,
+        });
+    </script>
+</body>
+</html>
