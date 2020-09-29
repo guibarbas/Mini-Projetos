@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px 100px 0;
+    background: linear-gradient(to bottom, #d509a0, #ff606e);
+}
+
+section::before {
+    content: 'ZOOMX';
+    position: absolute;
+    font-size: 20vw;
+    color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    margin-top: 20vh;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.toggle {
+    width: 30px;
+    height: 30px;
+    background: url(menu.png);
+    background-size: 30px;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.content .imgBx {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.content .imgBx img {
+    max-width: 100%;
+}
+
+.content .text {
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.content .text h2 {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.content .text p {
+    color: #fff;
+}
+
+.content .text a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #111;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+.sci {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: invert(1);
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    display: block;
+    transform: scale(0.7);
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 20px 40px;
+    }
+
+    section {
+        padding: 40px;
+        overflow-x: hidden;
+    }
+
+    section::before {
+        font-size: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .content {
+        margin-top: 120px;
+    }
+
+    .sci {
+        margin-top: 80px;
+        position: relative;
+        bottom: 0;
+        right: initial;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        filter: invert(1);
+    }
+
+    .sci li {
+        margin-right: 15px;
+    }
+}
