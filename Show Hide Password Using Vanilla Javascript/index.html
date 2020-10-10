@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Hide Password Using Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="inputBox">
+        <input type="password" name="" placeholder="Enter Password" id="password">
+        <div id="toggle" onclick="showHide();"><i></i></div>
+    </div>
+    <script type="text/javascript">
+        let password = document.getElementById('password');
+        let toggle = document.getElementById('toggle');
+
+        function showHide() {
+            if (password.type === 'password') {
+                password.setAttribute('type', 'text')
+                toggle.classList.add('hide');
+            } else {
+                password.setAttribute('type', 'password')
+                toggle.classList.remove('hide');
+            }
+        }
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
+</body>
+</html>
