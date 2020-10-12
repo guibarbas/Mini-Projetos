@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock UI Design Using HTML CSS3 & Vanilla Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="clock">
+        <h2>The time is now</h2>
+        <div id="time">
+            <div><span id="hours">00</span><span>Hours</span></div>
+            <div><span id="minutes">00</span><span>Minutes</span></div>
+            <div><span id="seconds">00</span><span>Seconds</span></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function clock(){
+        let hours = document.getElementById('hours');
+        let minutes = document.getElementById('minutes');
+        let seconds = document.getElementById('seconds');
+
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+    }
+        let interval = setInterval (clock, 1000);
+    </script>
+</body>
+</html>
