@@ -53,6 +53,13 @@ section {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    border: 1px solid #2196f3;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #2196f3;
 }
 
 header {
@@ -203,7 +210,7 @@ img {
 
 .testimonials .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -233,6 +240,31 @@ img {
 .testimonials .content .testimonialsBx h3 span {
     font-size: 14px;
     font-weight: 400;
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+ }
+
+blockquote::before {
+    content: '\f10d';
+    display: flex;
+    margin-bottom: -50px;
+    font-family: 'Fontawesome';
+    justify-content: flex-start;
+    font-size: 3em;
+    color: #cfcfcfc7;
+    z-index: 10;
+}
+blockquote::after {
+    content: '\f10e';
+    display: flex;
+    margin-top: -46px;
+    font-family: 'Fontawesome';
+    justify-content: flex-end;
+    font-size: 3em;
+    color: #cfcfcfc7;
 }
 
 .contact {
@@ -283,6 +315,13 @@ img {
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
+    border: 1px solid #2196f3;
+    transition: 0.3s;
+}
+
+.formBx form input[type="submit"]:hover {
+    background: transparent;
+    color: #2196f3;
 }
 
 .contactInfo {
@@ -440,6 +479,14 @@ img {
 
     .testimonials .content .testimonialsBx h3 {
         margin-top: 20px;
+    }
+
+    blockquote::before {
+        margin-bottom: -40px;
+    }
+
+    blockquote::after {
+        margin-top: -36px;
     }
 
     .contactInfo {
